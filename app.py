@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 df = pd.read_csv(os.path.join(BASE_DIR, "data/WA_Fn-UseC_-HR-Employee-Attrition.csv"))
 
 st.set_page_config(layout="wide")
-st.title("💼 Employee Attrition Predictor")
+st.title(" Employee Attrition Predictor")
 
 # ---------------- INPUT SECTION ----------------
 st.subheader("🧾 Enter Employee Details")
