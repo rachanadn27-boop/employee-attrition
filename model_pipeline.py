@@ -30,7 +30,7 @@ def train_model():
         X, y, test_size=0.2, stratify=y, random_state=42
     )
 
-    # 🔥 Balanced learning without SMOTE
+    #  Balanced learning without SMOTE
     scale = (y_train == 0).sum() / (y_train == 1).sum()
 
     model = XGBClassifier(
@@ -46,7 +46,7 @@ def train_model():
 
     model.fit(X_train, y_train)
 
-    # 🔥 Threshold tuning (KEY for higher accuracy)
+    #  Threshold tuning (KEY for higher accuracy)
     probs = model.predict_proba(X_test)[:, 1]
     preds = (probs > 0.6).astype(int)
 
